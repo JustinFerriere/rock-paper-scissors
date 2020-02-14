@@ -7,23 +7,25 @@
 
     <title>Rock Paper Scissors</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/reset.css" />
   </head>
 
   <body>
     <div id="header">
       <h1>Rock Paper Scissors</h1>
+      <h2>A classic game of Rock-Paper-Scissors. The player with the most points after 3 rounds wins!</h2>
       <h2>Choose your weapon below!</h2>
     </div>
     <div id="button-container">
-      <button id="rock" class="choicebtn">Rock</button>
-      <button id="paper" class="choicebtn">Paper</button>
-      <button id="scissors" class="choicebtn">Scissors</button>
+      <img src="images/rock.jpg" id="rock" class="choicebtn" alt="Rock" />
+      <img src="images/paper.jpg" id="paper" class="choicebtn" alt="Paper" />
+      <img src="images/scissors.jpg" id="scissors" class="choicebtn" alt="Scissors" />
     </div>
     <div id="result-container">
-      <p id="game-round"></p>
+      <p id="game-round">ROUND: 0</p>
       <p id="print-result"></p>
-      <p id="score"></p>
+      <p id="score">PLAYER: 0 | COMPUTER: 0</p>
     </div>
 
     <script src="script.js"></script>
