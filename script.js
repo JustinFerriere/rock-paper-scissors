@@ -47,6 +47,8 @@ function playRound(player, computer) {
     computerScore++;
   } else if (player === computer) {
     printResult.innerHTML = `It's a draw!`;
+    computerScore++;
+    playerScore++;
   }
 }
 
@@ -65,13 +67,15 @@ function playGame() {
   computer = computerChoice();
   playRound(player, computer);
   round.innerHTML = `ROUND: ${gameRound}`;
-  score.innerHTML = `PLAYER: ${playerScore} COMPUTER: ${computerScore}`;
-  if (playerScore === 5) {
-    alert('Congratulations! You win the game!')
-    resetGame();
-  } else if (computerScore === 5) {
-    alert('You lost the game. Better luck next time.')
-    resetGame();
+  score.innerHTML = `PLAYER: ${playerScore} | COMPUTER: ${computerScore}`;
+  if (gameRound === 3) {
+    if (playerScore < computerScore) {
+      alert('Congratulations! You won the game!');
+      resetGame();
+    } else if (playerScore > computerScore) {
+      alert('You lost the game. Better luck next time!')
+      resetGame();
+    }
   }
 }
 
